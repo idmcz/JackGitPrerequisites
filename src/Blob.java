@@ -21,7 +21,7 @@ public class Blob {
 	}
 	
 	private void writeFile () throws IOException{
-		Path p = Paths.get(hash + ".txt");//gets the path to the final file
+		Path p = Paths.get("./objects/" + hash);//gets the path to the final file
 		Path path = Paths.get(name);//gets the path to original file
 		String s = Files.readString(path);//gets the text of the original file 
 	    try {
