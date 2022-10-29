@@ -9,12 +9,12 @@ public class TreeTester {
 				"blob : a4ea325cb2b904d0f914125b3347ce094c54be61", // A Bug's Life
 				"blob : 8c9b13eb3c5b29cadc65dad4596fee04162c5d72" // The Emoji Movie
 			};
-			Tree tr = new Tree(str);
-			if (tr.getName().matches("^[a-fA-F0-9]{40}$"))
+			Tree tree = new Tree(str);
+			if (tree.getName().matches("^[a-fA-F0-9]{40}$"))
 				System.out.println("Correct SHA1");
 			else
 				System.out.println("Incorrect SHA1");
-			String c = tr.contents();
+			String c = tree.contents();
 			if (c.substring(0,48).equals("tree : 4843a77c34c464f3582f2fd10b6d52fde3c41744"))
 				System.out.println("Correct contents (1/4)");
 			if (c.substring(48,97).equals("tree : a4ea92f9ab7458324cc66c8bb7062d6b4e536510"))
